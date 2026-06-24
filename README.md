@@ -1,9 +1,24 @@
+<div align="center">
+
 # MultiSetNav — Meta Quest 3
 
-> **AR Indoor Navigation for Meta Quest 3** powered by MultiSet Visual Positioning System (VPS), OpenXR, and Mixed Reality passthrough — built as a proof-of-concept for hospital indoor navigation.
+**AR Indoor Navigation for Meta Quest 3** powered by MultiSet Visual Positioning System (VPS), OpenXR, and Mixed Reality passthrough — built as a proof-of-concept for university campus indoor navigation.
+
+[![Unity](https://img.shields.io/badge/Unity-6000.4.11f1-000000?style=flat&logo=unity&logoColor=white)](https://unity.com/releases/editor/archive)
+[![Platform](https://img.shields.io/badge/Platform-Meta%20Quest%203-1C1C1C?style=flat&logo=meta&logoColor=white)](https://www.meta.com/quest/quest-3/)
+[![MultiSet SDK](https://img.shields.io/badge/MultiSet%20SDK-1.14.3-4f46e5?style=flat)](https://docs.multiset.ai/multiset-quest-sdk/)
+[![Meta XR SDK](https://img.shields.io/badge/Meta%20XR%20SDK-83.0.1-0064E0?style=flat&logo=meta&logoColor=white)](https://developers.meta.com/horizon/documentation/unity/unity-project-setup/)
+[![OpenXR](https://img.shields.io/badge/OpenXR-1.16.1-6B4FBB?style=flat)](https://www.khronos.org/openxr/)
+[![URP](https://img.shields.io/badge/URP-17.4.0-000000?style=flat&logo=unity&logoColor=white)](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@17.4/manual/index.html)
+[![C#](https://img.shields.io/badge/C%23-512BD4?style=flat&logo=csharp&logoColor=white)](https://learn.microsoft.com/en-us/dotnet/csharp/)
+[![MCP](https://badge.mcpx.dev?status=on 'MCP Enabled')](https://modelcontextprotocol.io/introduction)
+[![License](https://img.shields.io/badge/License-WTFPL-red.svg)](http://www.wtfpl.net/)
+
+</div>
 
 ## Demo
 
+> [!NOTE]
 > Recorded at commit [`6b0d347`](../../commit/6b0d347) — *Adding Meta XR Simulator into The Project*
 
 ### Phase 1 — Foundation (Basic MR Passthrough & Localization)
@@ -27,7 +42,7 @@ This project runs on two parallel platform tracks:
 | Main | Android (ARCore) | ARFoundation, ARCore |
 | **This repo** | **Meta Quest 3 (Mixed Reality)** | **OpenXR, OVRCameraRig, MR Passthrough** |
 
-**Target deployment:** RS A. Yani hospital — indoor navigation for patients, visitors, and staff.
+**Target deployment:** PENS PSDKU Lamongan — indoor navigation for students, visitors, and staff.
 
 ### How It Works
 
@@ -43,9 +58,12 @@ All AR content (children of MapSpace) auto-anchors to the real world
 
 Because the map is scanned once and stored in the MultiSet cloud, **the same map works on both Android and Quest simultaneously** — no need to re-scan.
 
----
-
 ## Tech Stack
+
+<div align="center">
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/c%23.png" alt="C#" title="C#"/></code>
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/unity.png" alt="Unity" title="Unity"/></code>
+</div>
 
 ### Core Engine
 
@@ -81,8 +99,6 @@ Because the map is scanned once and stored in the MultiSet cloud, **the same map
 - **FastAPI + PostgreSQL + Redis** — role-based navigation backend
 - **WebSocket** — realtime user tracking and notifications
 
----
-
 ## Current State
 
 ### Already in Place
@@ -100,10 +116,8 @@ Because the map is scanned once and stored in the MultiSet cloud, **the same map
 - [ ] OpenXR enabled in XR Plug-in Management
 - [ ] First custom scene (beyond the default template)
 - [ ] Custom scripts
-- [ ] Map Code from campus / hospital environment configured
+- [ ] Map Code from PENS PSDKU Lamongan campus configured
 - [ ] Coplay MCP integrated for AI-assisted development workflow
-
----
 
 ## Project Structure
 
@@ -218,14 +232,12 @@ Use these scenes as reference before building your own. Do not edit them directl
 
 > The map GLB file at `Navigation/MapData/MAP_5LCPVQZ0MR4D.glb` is for editor authoring only. **Remove it before your final build.**
 
----
-
 ## Roadmap
 
 ### Phase 1 — Foundation *(In Progress)*
 - [ ] Enable and validate OpenXR + Meta XR in project settings
 - [ ] Build a basic Mixed Reality passthrough scene from scratch
-- [ ] Localize against a real campus / hospital map
+- [ ] Localize against a real PENS PSDKU Lamongan campus map
 - [ ] Confirm MapSpace anchoring works correctly on device
 
 ### Phase 2 — Navigation
@@ -237,16 +249,14 @@ Use these scenes as reference before building your own. Do not edit them directl
 ### Phase 3 — Multi-user & Backend
 - [ ] Multiplayer sync via Photon PUN 2 (shared MapSpace coordinate)
 - [ ] FastAPI backend connection with role-based navigation
-- [ ] Role-specific POI and notifications (Patient, Visitor, Staff, Admin)
+- [ ] Role-specific POI and notifications (Student, Visitor, Staff, Admin)
 - [ ] JWT authentication flow
 
-### Phase 4 — Hospital Deployment
-- [ ] Scan and upload RS A. Yani hospital maps
+### Phase 4 — Campus Deployment
+- [ ] Scan and upload PENS PSDKU Lamongan campus maps
 - [ ] Queue management system
 - [ ] Live user tracking via WebSocket
 - [ ] Multi-floor navigation using MapSet (multiple linked maps)
-
----
 
 ## System Architecture
 
@@ -314,6 +324,12 @@ Use these scenes as reference before building your own. Do not edit them directl
 
 
 ## Acknowledgements
+
+<div align="center">
+
+<img width="480" alt="Image" src="https://github.com/user-attachments/assets/6b82045d-cf5b-456c-a33f-fe86649c7680" />
+
+</div>
 
 A huge thanks to [**MultiSet-AI**](https://github.com/multiset-ai) for building and maintaining the MultiSet SDK — an end-to-end Visual Positioning System platform that makes accurate, marker-free AR localization accessible to developers across Android, Meta Quest, iOS, and WebXR from a single scanned map.
 
