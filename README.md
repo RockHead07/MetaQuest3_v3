@@ -260,34 +260,9 @@ Use these scenes as reference before building your own. Do not edit them directl
 
 ## System Architecture
 
-```
-┌──────────────────────────────────────────────────┐
-│                  CLIENT LAYER                    │
-│                                                  │
-│   Android AR (ARFoundation) │ Meta Quest 3 (MR) │
-│                └────────────┘                    │
-│              MultiSet VPS                        │
-│       (Shared Map · Shared 6-DoF Coords)         │
-│          Photon PUN 2 (Multiplayer)              │
-│       HttpClient + WebSocket Client              │
-└─────────────────┬────────────────────────────────┘
-                  │
-┌─────────────────▼────────────────────────────────┐
-│                API GATEWAY                       │
-│         Auth · Rate Limit · Role Guard           │
-└─────────────────┬────────────────────────────────┘
-                  │
-┌─────────────────▼────────────────────────────────┐
-│            BACKEND MICROSERVICES                 │
-│   Auth Service · Navigation Service             │
-│   Queue Service · Realtime / WebSocket          │
-└─────────────────┬────────────────────────────────┘
-                  │
-┌─────────────────▼────────────────────────────────┐
-│               DATA LAYER                         │
-│         PostgreSQL  ·  Redis Cache               │
-└──────────────────────────────────────────────────┘
-```
+<div align="center">
+<img width="480" alt="Image" src="https://github.com/user-attachments/assets/7d8fbe51-687e-4048-aa1e-9694d1a204da" />
+</div>
 
 ## Naming Conventions
 
