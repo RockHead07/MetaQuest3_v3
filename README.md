@@ -2,8 +2,6 @@
 
 > **AR Indoor Navigation for Meta Quest 3** powered by MultiSet Visual Positioning System (VPS), OpenXR, and Mixed Reality passthrough — built as a proof-of-concept for hospital indoor navigation.
 
----
-
 ## Demo
 
 > Recorded at commit [`6b0d347`](../../commit/6b0d347) — *Adding Meta XR Simulator into The Project*
@@ -11,23 +9,12 @@
 ### Phase 1 — Foundation (Basic MR Passthrough & Localization)
 
 <!-- VIDEO PLACEHOLDER -->
-<!-- If uploading to YouTube:
-[![MultiSetNav Phase 1 Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
--->
 
-<!-- If uploading directly to GitHub (drag & drop a video into any issue/PR, then copy the asset URL here):
-https://github.com/USER/REPO/assets/YOUR_ASSET_URL
--->
+<div align="center">
 
-```
-[ VIDEO DEMO PLACEHOLDER — Phase 1: Foundation ]
-
-Record your demo and place the link here.
-Reference commit: 6b0d347
-Topics: Meta XR Simulator, Mixed Reality Passthrough, MultiSet SDK setup
-```
-
----
+[![MultiSetNav Phase 1 Demo](https://img.youtube.com/vi/lB9SYJmqm_0/maxresdefault.jpg)](https://youtu.be/lB9SYJmqm_0)
+    
+</div>
 
 ## Overview
 
@@ -154,10 +141,8 @@ MetaQuest3_v3/
     ├── ProjectSettings.asset                    # Build target, product settings
     └── XRSettings.asset                         # XR configuration
 ```
-
-> **Important:** Never edit scenes inside `Assets/Samples/` directly. Copy them to a new folder (e.g. `Assets/MultiSetDemoScenes/`) before making any changes.
-
----
+> [!IMPORTANT]
+> Never edit scenes inside `Assets/Samples/` directly. Copy them to a new folder (e.g. `Assets/MultiSetDemoScenes/`) before making any changes.
 
 ## Prerequisites
 
@@ -168,8 +153,6 @@ Before opening this project, make sure you have:
 3. **Meta Quest 3** device, or use the built-in **Meta XR Simulator** for editor testing
 4. **MultiSet account** — required to get a Map Code from a scanned environment
 5. *(Optional)* **Python 3.10+** for Coplay MCP integration
-
----
 
 ## Setup
 
@@ -191,7 +174,7 @@ Edit → Project Settings → XR Plug-in Management
 Edit → Project Settings → XR Plug-in Management → OpenXR
   → Add "Meta Quest feature set"
 ```
-
+> [!WARNING]
 > Do **not** use the "Oculus XR Plugin" — it is deprecated. Always use OpenXR.
 
 ### 3. AndroidManifest Permission (required for device build)
@@ -220,8 +203,6 @@ Meta XR Simulator is already included in this project. Enable it via:
 ```
 Meta → Meta XR Simulator → Enable
 ```
-
----
 
 ## Sample Scenes
 
@@ -298,8 +279,6 @@ Use these scenes as reference before building your own. Do not edit them directl
 └──────────────────────────────────────────────────┘
 ```
 
----
-
 ## Naming Conventions
 
 | Type | Convention | Examples |
@@ -308,8 +287,6 @@ Use these scenes as reference before building your own. Do not edit them directl
 | GameObjects | PascalCase with spaces | `Map Space`, `Navigation Agent` |
 | Scene files | PascalCase | `MainNavigation.unity` |
 | Custom folders | PascalCase | `MultiSetDemoScenes/`, `Scripts/` |
-
----
 
 ## Key Notes & Gotchas
 
@@ -323,7 +300,6 @@ Use these scenes as reference before building your own. Do not edit them directl
 | **MapSpace must be the parent** | All AR content must be a child of `MapSpace` to be anchored to the real world by the SDK. |
 | **Maps are cross-platform** | A map scanned once in MultiSet works on both Android and Meta Quest — no re-scanning needed. |
 
----
 
 ## References
 
@@ -336,13 +312,21 @@ Use these scenes as reference before building your own. Do not edit them directl
 | Meta XR SDK Setup Guide | https://developers.meta.com/horizon/documentation/unity/unity-project-setup/ |
 | OpenXR in Unity | https://docs.unity3d.com/Packages/com.unity.xr.openxr@1.16/manual/index.html |
 
----
+
+## Acknowledgements
+
+A huge thanks to [**MultiSet-AI**](https://github.com/multiset-ai) for building and maintaining the MultiSet SDK — an end-to-end Visual Positioning System platform that makes accurate, marker-free AR localization accessible to developers across Android, Meta Quest, iOS, and WebXR from a single scanned map.
+
+This project would not exist without their work. If you're building AR indoor navigation, go check them out:
+
+- GitHub: [github.com/multiset-ai](https://github.com/multiset-ai)
+- Docs: [docs.multiset.ai](https://docs.multiset.ai)
+- Website: [multiset.ai](https://www.multiset.ai)
+
 
 ## License
 
 This project is licensed under the **WTFPL** — *Do What The Fuck You Want To Public License*.
 See the [LICENSE](LICENSE) file for details.
-
----
 
 *Developed by RockHead07 · Part of the MultiSetNav AR Indoor Navigation project.*

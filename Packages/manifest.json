@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.coplaydev.coplay": "https://github.com/CoplayDev/coplay-unity-plugin.git#beta",
     "com.multiset.sdk.quest": "https://github.com/MultiSet-AI/multiset-quest-sdk.git",
     "com.unity.ai.navigation": "2.0.13",
     "com.unity.collab-proxy": "2.12.4",

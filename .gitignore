@@ -105,3 +105,16 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# MultiSet SDK — sample scenes auto-installed by Package Manager (not user code)
+/[Aa]ssets/[Ss]amples/MultiSet Quest SDK/
+/[Aa]ssets/[Ss]amples/MultiSet Quest SDK.meta
+
+# MultiSet map mesh files — editor authoring only, must not ship in builds or repos
+# These are referenced in README: remove before final build
+/[Aa]ssets/[Ss]amples/MultiSet Quest SDK/**/*.glb
+/[Aa]ssets/[Ss]amples/MultiSet Quest SDK/**/*.glb.meta
+
+# Meta XR SDK — sample scenes auto-installed by Package Manager (not user code)
+/[Aa]ssets/[Ss]amples/Meta XR Interaction SDK Essentials/
+/[Aa]ssets/[Ss]amples/Meta XR Interaction SDK Essentials.meta
